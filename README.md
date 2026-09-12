@@ -121,6 +121,16 @@ curl "$FLOW2API_BASE_URL/v1/chat/completions" \
 
 ![Cookie 同步日志（已脱敏）](docs/screenshots/cookie-sync.png)
 
+## Cookie 同步插件预览
+
+### 插件配置与同步状态
+
+![插件配置与同步状态（已脱敏）](docs/screenshots/plugin-settings.jpg)
+
+### 插件同步日志
+
+![插件会话同步成功日志（已脱敏）](docs/screenshots/plugin-sync-logs.jpg)
+
 ## 开发与验证
 
 ```bash
