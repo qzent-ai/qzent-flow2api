@@ -10,6 +10,7 @@
 
 - [token.qzent.ai](https://token.qzent.ai/)
 - [Qzent 官网 · www.qzent.ai](https://www.qzent.ai/)：了解 Qzent 产品与服务。
+- 问题反馈：[GitHub Issues](https://github.com/qzent-ai/qzent-flow2api/issues)
 - 联系邮箱：[fredxsc@gmail.com](mailto:fredxsc@gmail.com)
 
 ## 本分支增加的功能
@@ -98,6 +99,8 @@ python3 -m venv .venv
 
 ### 生成所需配置
 
+**示例 TOML 中 `captcha_method` 仍为 `extension`；新版网页模式首次部署时，请在系统配置中切换为下面支持的验证码服务并填写其密钥。**
+
 1. 导入已经登录 Flow 的 Cookie JSON，确认账号与会话验证结果。
 2. 在系统配置中配置新版网页模式支持的验证码服务。目前生成路径接受 YesCaptcha、CapMonster、EzCaptcha 或 CapSolver；仅导入 Cookie 并不代表已具备生成能力。
 3. 根据服务器网络配置请求和媒体代理；需要服务端缓存结果时启用缓存，并将缓存基础地址设为调用者可访问的地址。
@@ -125,6 +128,8 @@ docker compose up -d --build
 更新前备份私有配置和数据库；不要用上游镜像替换本分支。已有部署应保留自己的端口、网络和卷挂载配置。`docker-compose.headed.yml` 等其他形态保留用于兼容，不作为新版网页生成的默认安装路径。
 
 ## API
+
+完整示例见 [API 调用示例](docs/API_EXAMPLES.md)：文生图、参考图编辑、文生视频、首尾帧、参考图视频、视频编辑及 Gemini 请求。
 
 | 接口 | 用途 |
 |---|---|
@@ -162,6 +167,21 @@ curl "$FLOW2API_BASE_URL/v1/chat/completions" \
 ```bash
 docker compose logs --tail=100 flow2api
 ```
+
+### 常用配置参考
+
+以下值来自仓库示例配置，已运行实例请以管理页实际值为准。
+
+| 配置项 | 示例值 | 用途 |
+|---|---|---|
+| `generation.image_timeout` | `300` 秒 | 图片生成超时 |
+| `generation.video_timeout` | `1500` 秒 | 视频生成超时 |
+| `flow.max_retries` | `3` | 上游请求最大重试配置 |
+| `proxy.proxy_enabled` | `false` | 是否启用请求代理 |
+| `proxy.proxy_url` | 空 | 请求代理地址，按部署网络填写 |
+| `cache.enabled` | `false` | 是否启用结果缓存 |
+| `cache.timeout` | `7200` 秒 | 缓存有效期，`0` 不自动删除 |
+| `cache.base_url` | 空 | 调用方访问缓存文件的基础地址 |
 
 ### 缓存与持久化
 
