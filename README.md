@@ -151,6 +151,5 @@ RUN_DOCKER_CONTEXT_TEST=1 .venv/bin/python -m pytest tests/test_release_containe
 - [安全说明](SECURITY.md)
 - [MIT 许可证](LICENSE)，保留 `Copyright (c) 2025 TheSmallHanCat`。
 - [上游项目](https://github.com/TheSmallHanCat/flow2api)
-- [上游 Token Updater](https://github.com/TheSmallHanCat/Flow2API-Token-Updater)：旧版插件不应视为兼容新版网页会话，请使用经过适配的版本或手动导入。
 
 本分支问题请提交至本仓库维护者，避免把 Qzent 扩展的问题直接归给上游。本仓库从服务端源码快照初始化，不携带内部仓库历史；来源见 [NOTICE](NOTICE)。
