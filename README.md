@@ -10,6 +10,7 @@
 
 - [token.qzent.ai](https://token.qzent.ai/)
 - [Qzent 官网 · www.qzent.ai](https://www.qzent.ai/)：了解 Qzent 产品与服务。
+- 联系邮箱：[fredxsc@gmail.com](mailto:fredxsc@gmail.com)
 
 ## 本分支增加的功能
 
