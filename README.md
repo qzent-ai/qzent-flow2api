@@ -79,6 +79,23 @@ python3 -m venv .venv
 
 本地默认入口：`http://localhost:8000/manage`。Windows 可使用 `.venv\Scripts\python.exe` 和 `.venv\Scripts\pip.exe`。
 
+### 首次登录：地址、用户名与密码
+
+| 项目 | Docker 默认部署 | 本地 Python 默认部署 |
+|---|---|---|
+| 登录地址 | `http://localhost:38000/login` | `http://localhost:8000/login` |
+| 管理控制台 | `http://localhost:38000/manage` | `http://localhost:8000/manage` |
+| 模型测试页 | `http://localhost:38000/test` | `http://localhost:8000/test` |
+| OpenAI 兼容 Base URL | `http://localhost:38000/v1` | `http://localhost:8000/v1` |
+| 示例默认用户名 | `admin` | `admin` |
+| 示例默认密码 | `admin` | `admin` |
+
+`admin / admin` 来自仓库的示例配置，仅适用于未修改配置的全新实例。按前面的安装步骤修改密码后，应使用自己设置的密码登录。已有实例使用已保存的管理员凭据，不会因更新代码恢复默认密码。
+
+在另一台电脑访问时，将 `localhost` 替换为部署服务器的 IP；如果已配置 HTTPS 域名，则使用 `https://你的域名/login`。端口以实际部署和反向代理配置为准。
+
+请在对外开放前修改默认密码。登录后可在“系统配置 → 安全配置”修改管理员密码；调用 API 使用单独的 API Key，首次留空时系统会随机生成，可在“系统配置 → API 密钥配置”查看。
+
 ### 生成所需配置
 
 1. 导入已经登录 Flow 的 Cookie JSON，确认账号与会话验证结果。
