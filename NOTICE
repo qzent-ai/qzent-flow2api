@@ -1,0 +1,12 @@
+Qzent Flow2API
+
+Based on Flow2API by TheSmallHanCat:
+https://github.com/TheSmallHanCat/flow2api
+
+Original copyright: Copyright (c) 2025 TheSmallHanCat.
+Distributed under the MIT License; see LICENSE.
+Qzent modifications are provided under the same MIT License.
+
+This initial release is a server-only source snapshot. Browser extension
+sources, product applications, account management tools, private deployment
+data, and internal repository history are not included.

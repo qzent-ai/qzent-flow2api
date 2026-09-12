@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+
+# Logs
+*.log
+logs.txt
+
+# IDE
+.claude/
+.worktrees/
+.vscode/
+.idea/
+.lh/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Config (optional)
+# config/setting.toml
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+browser_data
+browser_data_rt
+
+data
+tmp/
+config/setting.toml
+config/setting_warp.toml
+config/setting_warp_example.toml
+
+
+# 根目录临时测试文件
+/test_*
+tests/__pycache__/
+*.har
+
+# Local deployment overrides
+docker-compose.override.yml
+config/*.bak-*
+
+# Private companion projects must never enter this public repository
+extension/
+qzent-studio/
+flow-accounts/
+Flow2API-Token-Updater/
