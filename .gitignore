@@ -82,3 +82,6 @@ extension/
 qzent-studio/
 flow-accounts/
 Flow2API-Token-Updater/
+
+# Local agent instructions are private at every directory level
+AGENTS.md
