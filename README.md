@@ -6,7 +6,10 @@
 
 保留上游 MIT 许可证及版权声明。本项目是社区维护的非官方接口适配，不隶属于 Google；使用能力受账号权限、可用积分和上游服务状态影响。
 
-本仓库仅包含 Qzent Flow2API 服务端、管理控制台和测试，不包含产品端、账号管理工具或浏览器插件源码。保留服务端 Cookie 同步接口，可手动导入 Cookie 使用。API 路径、现有模型别名和容器服务名称保持兼容。
+## 探索 Qzent
+
+- [token.qzent.ai](https://token.qzent.ai/)
+- [Qzent 官网 · www.qzent.ai](https://www.qzent.ai/)：了解 Qzent 产品与服务。
 
 ## 本分支增加的功能
 
